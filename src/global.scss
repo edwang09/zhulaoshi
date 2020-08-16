@@ -1,0 +1,27 @@
+// @font-face {
+//     font-family: "myfont";
+//     src: url("./test.ttf") format("truetype");
+// }
+*{
+    box-sizing: border-box;
+    margin: 0 0;
+    padding: 0 0;
+    font-size: 20px;
+}
+
+h1, h2, h3, h4, h5, p, span{
+    font-family: "myfont";
+    font-weight: normal;
+}
+
+button{
+    font-family: "myfont";
+    display: block;
+    width: 250px;
+    box-shadow: none;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 50px;
+    margin: 5px;
+    border: none;
+}
