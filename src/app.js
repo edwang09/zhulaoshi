@@ -1,5 +1,7 @@
 import React from "react";
 import "./global.scss";
+import Header from "./components/header"
+import Footer from "./components/footer"
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,11 +17,13 @@ class App extends React.Component{
 <Router>
       <div>
 
-        <Switch>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
+        <Header/>
+          <Switch>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+        <Footer/>
       </div>
     </Router>
     );

@@ -24,9 +24,10 @@ module.exports = {
         test: /\.(png|jpg|gif)$/i,
         use: [
           {
-            loader: 'url-loader',
+            loader: 'file-loader',
             options: {
               limit: 8192,
+              name: "[hash].[ext]"
             },
           },
         ],
@@ -36,7 +37,7 @@ module.exports = {
   resolve: { extensions: ["*", ".js", ".jsx"] },
   output: {
     path: path.resolve(__dirname, "public/"),
-    publicPath: "/",
+    publicPath: "/zhulaoshi/",
     filename: "bundle.js"
   },
   devServer: {

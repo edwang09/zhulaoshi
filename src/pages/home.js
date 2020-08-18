@@ -1,15 +1,15 @@
 import React from "react";
-
-import SwipeableViews from 'react-swipeable-views';
-import classNames from 'classnames';
+import classNames from "classnames"
 import "./home.scss";
-import trees from "../assets/trees.png"
-import male from "../assets/male.png"
-import female from "../assets/female.png"
+import study from "../assets/study.png"
+import icons from "../assets/icons.png"
+import potrait from "../assets/potrait.png"
+import tsinghua from "../assets/tsinghua.png"
 class Home extends React.Component{
     
     state = {
         tab: 0,
+        currentIndex:0
 
     }
     handleChangeIndex = index => {
@@ -25,91 +25,219 @@ class Home extends React.Component{
     render(){
         return(
         <div className="home">
-            <div className="banner">
-                <div className="logo">
-                    <div className="logoicon"></div>
-                    <p className="logotext">樹洞</p>
-                </div>
-                <div className="title">
-                    <p className="title1">今天的你，</p>
-                    <p className="title2">過的好嗎？</p>
-                </div>            
-                <div className="trees">
-                    <img src={trees} alt="trees"/>
-                </div>
-                <div className="buttons">
-                    <button className="reserve">預約傾聽者</button>
-                    <button className="become">成為傾聽者</button>
-                </div>
-
-            </div>
-            <div className="content">
-                <div className="tabs">
-                    <div className={classNames("tab",{"active":this.state.tab===0})} onClick={()=>{this.setState({tab:0 })}}>
-                        <p>理念</p>
-                    </div>
-                    <div className={classNames("tab",{"active":this.state.tab===1})} onClick={()=>{this.setState({tab:1 })}}>
-                        <p>預約</p>
-                    </div>
-                    <div className={classNames("tab",{"active":this.state.tab===2})} onClick={()=>{this.setState({tab:2 })}}>
-                        <p>聯繫</p>
+            <section className="education">
+                <div className="intro">
+                    <h3>英语教学</h3>
+                    <div className="status">目前有 2 人学习中</div>
+                    <p>语教学英语教学英语，英语教学英语教学英语教学英语教学英语教学英语教学英语教学英语教学英语教学英语教学英语教学英语教学英语教学英语教学英语教学英语教学，英语教学英语教学英语教学英语教学英语教学英语教学语教学。</p>
+                    <div className="buttons">
+                        <button className="signup">免费注册</button>
+                        <button className="watch">观看简介影片</button>
                     </div>
                 </div>
-            <SwipeableViews index={this.state.tab} onChangeIndex={this.handleChangeIndex}>
-                    <div  className="slide">
-                    理念內容
+                <div className="slide">
+                    <div className="dots">
+                        <div className={classNames({
+                                    "dot":true,
+                                    "current":this.state.currentIndex===0
+                                })}></div>
+                                
+                        <div className={classNames({
+                                    "dot":true,
+                                    "current":this.state.currentIndex===1
+                                })}></div>
+                        <div className={classNames({
+                                    "dot":true,
+                                    "current":this.state.currentIndex===2
+                                })}></div>
+                        <div className={classNames({
+                                    "dot":true,
+                                    "current":this.state.currentIndex===3
+                                })}></div>
                     </div>
-                    <div  className="slide reserve">
-                        <div className="message">
-                            <h3>感謝您的支持</h3>
-                            <p>我們是一個很小的團隊，工作之餘希望能盡一份心意去打造一個平台，讓每個人都有個安心抒發內心的空間。希望每個人在需要的時候都能找到一個人傾訴，在黑夜中為您點上一盞燈。</p>
-                        </div>
-                        <div className="listener">
-                            <h3>傾聽者</h3>
-                            <div className="gallery">
+                    <div className="carousel">
+                        <div 
+                            onClick={()=>{this.setState(({currentIndex})=>{return {currentIndex: currentIndex-1}})}}
+                            className={classNames({
+                                    "left":true,
+                                    "hide":this.state.currentIndex===0
+                                })}>&lt;</div>
+                        <div className="content">
+                            <div className={classNames({
+                                "previous":this.state.currentIndex===1,
+                                "current":this.state.currentIndex===0,
+                                "next":this.state.currentIndex===-1, 
+                                })}>
+                                
                                 <div className="card">
-                                    <div className="photo">
-                                        <img src={female} alt="female"/>
+                                    <div className="potrait">
+                                        <img src={potrait} alt="potrait"/>
                                     </div>
-                                    <div className="name">
-                                    劉婉婷
+                                    <div className="bios">
+                                        <div className="basic">
+                                            <h5>吴佳怡 22</h5>
+                                            <p>清华大学经济系</p>
+                                        </div>
+                                        <div className="university">
+                                            <img src={tsinghua} alt="tsinghua"/>
+
+                                        </div>
                                     </div>
                                 </div>
+                                <div className="quote">
+                                    <div className="quotemark">“</div>
+                                    <p>非常感谢在这里遇到的每个人，非常感谢在这里遇到的每个人非常感谢在这里遇到的每个人非常感谢在这里遇到的每个人非常感谢在这里遇到的每个人非常感谢在这里遇到的每个人。</p>
+                                </div>
+                            </div>
+                            <div className={classNames({
+                                "previous":this.state.currentIndex===2,
+                                "current":this.state.currentIndex===1,
+                                "next":this.state.currentIndex===0, 
+                                })}>
                                 <div className="card">
-                                    <div className="photo">
-                                        <img src={male} alt="male"/>
+                                    <div className="potrait">
+                                        <img src={potrait} alt="potrait"/>
                                     </div>
-                                    <div className="name">
-                                    王辰浩
+                                    <div className="bios">
+                                        <div className="basic">
+                                            <h5>吴佳怡 22</h5>
+                                            <p>清华大学经济系</p>
+                                        </div>
+                                        <div className="university">
+                                            <img src={tsinghua} alt="tsinghua"/>
+
+                                        </div>
                                     </div>
+                                </div>
+                                <div className="quote">
+                                    <div className="quotemark">“</div>
+                                    <p>非常感谢在这里遇到的每个人，非常感谢在这里遇到的每个人非常感谢在这里遇到的每个人非常感谢在这里遇到的每个人非常感谢在这里遇到的每个人非常感谢在这里遇到的每个人。</p>
+                                </div>
+                            </div>
+                            <div className={classNames({
+                                "previous":this.state.currentIndex===3,
+                                "current":this.state.currentIndex===2,
+                                "next":this.state.currentIndex===1, 
+                                })}>
+                                <div className="card">
+                                    <div className="potrait">
+                                        <img src={potrait} alt="potrait"/>
+                                    </div>
+                                    <div className="bios">
+                                        <div className="basic">
+                                            <h5>吴佳怡 22</h5>
+                                            <p>清华大学经济系</p>
+                                        </div>
+                                        <div className="university">
+                                            <img src={tsinghua} alt="tsinghua"/>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="quote">
+                                    <div className="quotemark">“</div>
+                                    <p>非常感谢在这里遇到的每个人，非常感谢在这里遇到的每个人非常感谢在这里遇到的每个人非常感谢在这里遇到的每个人非常感谢在这里遇到的每个人非常感谢在这里遇到的每个人。</p>
+                                </div>
+                            </div>
+                            <div className={classNames({
+                                "previous":this.state.currentIndex===-1,
+                                "current":this.state.currentIndex===3,
+                                "next":this.state.currentIndex===2, 
+                                })}>
+                                <div className="card">
+                                    <div className="potrait">
+                                        <img src={potrait} alt="potrait"/>
+                                    </div>
+                                    <div className="bios">
+                                        <div className="basic">
+                                            <h5>吴佳怡 22</h5>
+                                            <p>清华大学经济系</p>
+                                        </div>
+                                        <div className="university">
+                                            <img src={tsinghua} alt="tsinghua"/>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="quote">
+                                    <div className="quotemark">“</div>
+                                    <p>非常感谢在这里遇到的每个人，非常感谢在这里遇到的每个人非常感谢在这里遇到的每个人非常感谢在这里遇到的每个人非常感谢在这里遇到的每个人非常感谢在这里遇到的每个人。</p>
                                 </div>
                             </div>
                         </div>
-                        <div className="action">
-                            <button className="search">配對傾聽者</button>
+                        <div 
+                        onClick={()=>{this.setState(({currentIndex})=>{return {currentIndex: currentIndex+1}})}}
+                        className={classNames({
+                                "right":true,
+                                "hide":this.state.currentIndex===3
+                                })}>&gt;</div>
+                    </div>
+                </div>
+            </section>
+            <section className="procedure">
+                <div className="procedurecontent">
+                    <h3>学习流程</h3>
+                    <div className="demo">
+                        <div className="illustration"><img src={study} alt="study"/></div>
+                        <div className="steps">
+                            <div className="step">
+                                <div className="index">1</div>
+                                <div className="detail">
+                                    <h4>日历上设定时间</h4>
+                                    <p>日历上会显示日历上会显示日历上会显示日历上会显示日历上会显示。</p>
+                                </div>
+                            </div>
+                            <div className="step">
+                                <div className="index">2</div>
+                                <div className="detail">
+                                    <h4>日历上设定时间</h4>
+                                    <p>历上会显示日历历上会显示日历历上会显示日历历上会显示日历。</p>
+                                </div>
+                            </div>
+                            <div className="step">
+                                <div className="index">3</div>
+                                <div className="detail">
+                                    <h4>日历上设定时间</h4>
+                                    <p>会显示日历历上会显示日历历上会显示日历历上会阿斯顿发发。</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div  className="slide contactus">
-                    <form>
-                        <h3>聯繫</h3>
-                        <div className="formgroup">
-                            <textarea name="contactus" id="" cols="30" rows="10" 
-                            value={this.state.contactus}
-                            onChange={(e)=>{this.setState({contactus:e.target.value})}}
-                            ></textarea>
-                        </div>
-                        <div className="actions">
-                            <button className="submit">
-                                提交
-                            </button>
-                        </div>
-                    </form>
+                </div>
+            </section>
+            <section className="fitting">
+                <h3>适合人群</h3>
+                <div className="icons">
+                    <img src={icons} alt="icons"/>
+                </div>
+                <div className="texts">
+                    <div className="ptab">
+                        <h4>学生</h4>
+                        <p>学生</p>
+                        <p>学生</p>
+                        <p>学生</p>
                     </div>
-                </SwipeableViews>
-            </div>
+                    <div className="ptab">
+                        <h4>互联网行业</h4>
+                        <p>学生</p>
+                        <p>学生</p>
+                        <p>学生学生</p>
+                    </div>
+                    <div className="ptab">
+                        <h4>自由职业者</h4>
+                        <p>学生</p>
+                        <p>学生学生</p>
+                        <p>学生学生</p>
+                    </div>
+                    <div className="ptab">
+                        <h4>其他行业</h4>
+                        <p>学生</p>
+                        <p>学生</p>
+                        <p>学生学生</p>
+                    </div>
+                </div>
 
-
-
+            </section>
         </div>
         );
     }

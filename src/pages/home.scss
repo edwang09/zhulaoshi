@@ -5,209 +5,267 @@ $darker-theme: #382100;
 $light-grey: #f5f5f5;
 $medium-grey: #adadad;
 $dark-grey: #434343;
-
-
-
-
+$dark-red: #CC0000;
 .home{
-    .banner{
-        padding: 20px 20px;
-        background-color: $light-theme;
-        color: $dark-theme;
+    section.education{
+        max-width: 1200px;
+        margin: auto;
+        padding: 50px 15px;
         display: flex;
-        flex-direction: column;
-        .logo{
-            display: flex;
-            align-items: center;
-            .logoicon{
-                height: 25px;
-                width: 25px;
-                background-color: $dark-theme;
-                border-radius: 50%;
-                display: block;
+        flex-wrap: wrap;
+        .intro{
+            width:100%;
+            max-width:500px;
+            margin: 20px 60px;
+            h3{
+                font-size: 40px;
+                margin-bottom: 25px;
             }
-            .logotext{
-                display: block;
-                font-size: 150%;
-                font-family: "myfont";
-                margin-left: 10px;
+            .status{
+                background-color: $dark-red;
+                color: $light-grey;
+                border-radius: 1px;
+                margin-bottom: 25px;
+                padding: 5px 20px;
+                height: auto;
+                font-size: 14px;
+                text-align: center;
+                max-width: 250px;
             }
-        }
-        .title{
-            margin:auto;
-            margin-top: 50px;
-            width: 400px;
-            max-width: 100%;
-            .title1, .title2{
-                font-size: 200%;
-                font-family: "myfont";
+            p{
+                margin-bottom: 25px;
+            }
+            .buttons{
+                display: flex;
+                .signup{
 
-            }
-            .title2{
-                text-align: right;
-            }
-        }
-        .trees{
-            img{
-                display: block;
-                width: 90%;
-                margin: auto;
-            }
-        }
-        .buttons{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            button{
-                display: block;
-                width: 250px;
-                box-shadow: none;
-                cursor: pointer;
-                border-radius: 10px;
-                height: 80px;
-                margin: 10px 25px;
-                font-size:120%;
-                &.reserve{
-                    color: $light-theme;
-                    background-color: $dark-theme;
-                    border: none;
-                    &:hover{
-                        background-color: $darker-theme;
-                    }
+                    background-color: $dark-grey;
+                    color: $light-grey;
+                    border-radius: 5px;
                 }
-                &.become{
-                    color: $dark-theme;
-                    background-color: $light-theme;
-                    border: 2px solid $dark-theme;
-                    &:hover{
-                        background-color:  $lighter-theme;
-                    }
-                }
-
-            }
-        }
-    }
-    .content{
-        .tabs{
-            display: flex;
-            background-color: #ededed;
-            justify-content: space-evenly;
-            box-shadow: -0px 3px 1px #ddd;
-            align-items: center;
-            .tab{
-                cursor: pointer;
-                padding: 20px 10px;
-                font-size: 90%;
-                color: $medium-grey;
-                &.active{
+                .watch{
+                    background-color: $light-grey;
                     color: $dark-grey;
+                    border: 2px solid $dark-grey;
+                    border-radius: 5px;
 
-                }
-                &:hover{
-                    color: $dark-grey;
                 }
             }
         }
         .slide{
-            padding: 15px;
-            min-height: 100px;
-            color: '#fff';
-        }
-        .reserve{
-            .message{
-                border-left: 4px solid $dark-grey;
-                padding: 5px 15px;
-                margin: 20px 0;
-                h3{
-                    color: $dark-grey;
-                    margin-bottom: 15px;
-                    font-size: 130%;
-                }
-                p{
-                    font-size: 80%;
+            width:100%;
+            max-width:500px;
+            .dots{
+                margin:auto;
+                display: flex;
+                justify-content: center;
+                .dot{
+                    margin: 6px;
+                    border-radius: 50%;
+                    height: 6px;
+                    width: 6px;
+                    background-color: $medium-grey;
+                    &.current{
+                        background-color: $dark-grey;
+                    }
                 }
             }
-            .listener{
-                padding: 5px 15px;
-                margin: 20px 0;
-                h3{
-                    color: $dark-grey;
-                    margin-bottom: 15px;
-                    font-size: 130%;
+            .carousel{
+                margin:20px auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .left, .right{
+                    margin: 0 20px;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    border: 2px solid #eee;
+                    color: #eee;
+                    font-size: 25px;
+                    font-weight: bold;
+                    line-height: 1.4;
+                    text-align: center;
+                    &.hide{
+                        visibility: hidden;
+                    }
+                    &:hover{
+                        border: 2px solid #bbb;
+                        color: #bbb;
+                        cursor: pointer;
+
+                    }
                 }
-                .gallery{
-                    width:100%;
-                    overflow-x: scroll;
-                    overflow-y: auto;
-                    height:280px;
-                    flex-direction: row;
-                    display: flex;
-                    justify-content: flex-start;
-                    .card{
-                        flex-shrink: 0;
-                        margin: 10px 20px 10px 0;
-                        width: 150px;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: flex-start;
-                        font-family: "myfont";
-                        // &:first-child{
-                        //     margin-left:0;
-                        // }
-                        .photo{
-                            height:180px;
-                            img{
-                                border-radius: 15px 15px 0 0 ;
-                                width:100%;
-                                object-fit: cover;
-                                height:100%;
+                .content{
+                    height: 450px;
+                    width: 100%;
+                    max-width: 330px;
+                    overflow: hidden;
+                    position: relative;
+                    & > div{
+                        position: absolute;
+                        left : 0;
+                        top:0;
+                        height: 450px;
+                        width: 100%;
+                        display: none;
+                        transition: all ease-in .2s;
+                        &.previous{
+                            display: block;
+                            transform: translateX(-100%)
+                        }
+                        &.current{
+                            display: block;
+                            
+                        }
+                        &.next{
+                            display: block;
+                            transform: translateX(100%)
+                        }
+                        .card{
+                            width: 220px;
+                            margin: auto;
+                            .potrait{
+                                width: 100%;
+                                img{
+                                    width: 100%;
+                                }
+                            }
+                            .bios{
+                                display: flex;
+                                justify-content: space-between;
+                                .basic{
+                                    h5{
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                    }
+                                    p{ 
+                                        font-size: 14px;
+                                    }
+
+                                }
+                                .university{
+                                    width: 40px;
+                                    height: 40px;
+                                    img{
+                                        width: 100%;
+                                    }
+                                }
                             }
                         }
-                        .name{
-                            border-radius:  0 0 15px 15px;
-                            text-align: center;
-                            padding: 15px;
-                            font-size: 70%;
-                            background-color: $light-grey;
+                        .quote{
+                            .quotemark{
+                                color: $medium-grey;
+                                margin-bottom: -50px;
+                                font-size: 100px;
+                            }
+                            p{
+                                font-size: 12px;
+                            }
                         }
                     }
                 }
             }
-
-            .action{
-                .search{
-                    display: block;
-                    color: $light-grey;
-                    margin: auto;
-                    margin-top: 20px;
-                    padding: 15px 15px;
-                    width: 280px;
-                    background-color: $dark-grey;
-                    box-shadow: none;
-                    cursor: pointer;
-                    font-size: 90%;;
-                    border:none;
+        }
+    }
+    section.procedure{
+        background-color: $light-grey;
+        .procedurecontent{
+            max-width: 1200px;
+            margin: auto;
+            padding: 50px 15px;
+            h3{
+                font-size: 40px;
+                margin-bottom: 25px;
+            }
+            .demo{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: stretch;
+                .illustration{
+                    max-width:450px;
+                    img{
+                        // box-shadow: 2px 2px 4px #ccc;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .steps{
+                    display: flex;
+                    flex-direction: column;
+                    .step{
+                        flex-grow: 1;
+                        display: flex;
+                        align-items: center;
+                        border-top-right-radius: 10px;
+                        border-bottom-right-radius: 10px;
+                        .index{
+                            margin: 5px 10px;
+                            font-size: 100px;
+    
+                        }
+                        .detail{
+                            h4{
+                                font-size: 25px;
+                            }
+    
+                        }
+                    }
                 }
             }
         }
-        .contactus{
-            .formgroup{
-                display: block;
-                margin: 10px 3px;
-                textarea{
-                    display: block;
-                    margin:auto;
-                    width: 100%;
+        
+    }
+    section.fitting{
+        max-width: 1200px;
+        margin: auto;
+        padding: 50px 15px;
+        h3{
+            font-size: 40px;
+            margin-bottom: 25px;
+        }
+        .icons{
+            max-width: 900px;
+            margin: 50px auto;
+            img{
+                width: 100%;
+            }
+        }
+        .texts{
+            display: flex;
+            justify-content: space-around;
+            max-width: 1000px;
+            margin: auto;
+            margin-bottom: 150px;
+            .ptab{
+                h4{
+                    margin-bottom: 20px;
+                    font-weight: bold;
+                    font-size:18px;
+                }
+                p{
+                    text-align: center
                 }
             }
-            button.submit{
+        }
+    }
+}
 
-                color: $light-grey;
-                margin: auto;
-                margin-top: 20px;
-                padding: 15px 15px;
-                width: 280px;
-                background-color: $dark-grey;
+@media only screen and (max-width: 795px) {
+    .home{
+        section.education{
+            .intro{
+                margin: 5px 5px;
+            }
+            .slide{
+                margin-top: 40px;
+                .carousel{
+                    margin:5px auto;
+                    .left, .right{
+                        margin: 0 5px;
+                    }
+                }
             }
         }
     }
@@ -215,44 +273,3 @@ $dark-grey: #434343;
 
 
 
-@media only screen and (min-width: 795px) {
-    .home {
-      display: flex;
-      .banner, .content{
-          height: 100vh;
-          min-height: 800px;
-      }
-      .banner{
-          width:65%;
-          overflow: hidden;
-          .trees{
-              max-width: 800px;
-              margin:auto;
-              order:3
-          }
-          .title{
-              width: 600px;
-              max-width: 100%;
-              font-size: 170%;
-          }
-          .buttons{
-              flex-direction: row;
-              align-self: center;
-              margin-top: 100px;
-          }
-      }
-      .content{
-          width:35%;
-          .reserve{
-              .listener{
-                  .gallery{
-                    overflow: auto;
-                    width:auto;
-                    height:auto;
-                    flex-wrap: wrap;
-                  }
-              }
-          }
-      }
-    }
-  }

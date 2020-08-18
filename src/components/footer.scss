@@ -1,0 +1,38 @@
+.footer{
+    background-color: #434343;
+    padding-top: 150px;
+    padding-bottom: 30px;
+    .links{
+        display: flex;
+        justify-content: space-around;
+        max-width: 1600px;
+        margin: auto;
+        margin-bottom: 150px;
+        .linktab{
+            h3{
+                color: #eee;
+                margin-bottom: 20px;
+                font-weight: bold;
+            }
+            a{
+                display: block;
+                color: #eee;
+                text-decoration: none;
+                &:hover{
+                    color: #ccc;
+                }
+            }
+
+        }
+    }
+    .copyright{
+        margin:30px auto;
+        text-align: center;
+        p{
+            color: #eee;
+            a{
+                color: #0097A7;
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+.header{
+    display: flex;
+    position: -webkit-sticky;
+    position: sticky;
+    z-index:999;
+    background-color: #fff;
+    top: 0px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    padding: 18px 40px;
+    box-shadow: 2px 2px 4px #eee;
+    .title{
+        display: flex;
+        align-items: center;
+        .logo{
+            margin-right: 15px;
+            img{
+                width: 40px;
+            }
+        }
+        h3{
+            font-size: 35px;
+        }
+
+    }
+    .auth{
+        ul{
+            display: flex;
+            list-style: none;
+            list-style-type: none;
+            li{
+                font-size: 20px;
+                margin: 5px 10px;
+
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 795px) {
+    .header{
+        padding: 10px 15px;
+    }
+}
