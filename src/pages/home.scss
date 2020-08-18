@@ -76,6 +76,7 @@ $dark-red: #CC0000;
                 align-items: center;
                 justify-content: center;
                 .left, .right{
+                    flex-shrink: 0;
                     margin: 0 20px;
                     width: 40px;
                     height: 40px;
@@ -201,12 +202,15 @@ $dark-red: #CC0000;
                         border-top-right-radius: 10px;
                         border-bottom-right-radius: 10px;
                         .index{
+                            color: #555;
+                            font-family: 'Yanone Kaffeesatz', sans-serif;
                             margin: 5px 10px;
                             font-size: 100px;
     
                         }
                         .detail{
                             h4{
+                                color: #555;
                                 font-size: 25px;
                             }
     
@@ -225,21 +229,24 @@ $dark-red: #CC0000;
             font-size: 40px;
             margin-bottom: 25px;
         }
-        .icons{
-            max-width: 900px;
-            margin: 50px auto;
-            img{
-                width: 100%;
-            }
-        }
+        
         .texts{
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-around;
             max-width: 1000px;
             margin: auto;
             margin-bottom: 150px;
             .ptab{
+                .icon{
+                    max-width: 150px;
+                    margin: 50px auto;
+                    img{
+                        width: 100%;
+                    }
+                }
                 h4{
+                    text-align: center;
                     margin-bottom: 20px;
                     font-weight: bold;
                     font-size:18px;

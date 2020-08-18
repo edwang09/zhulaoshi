@@ -4,7 +4,7 @@
 // }
 *{
     box-sizing: border-box;
-    font-family: roboto;
+    font-family: 'Roboto', sans-serif;
     margin: 0 0;
     padding: 0 0;
     font-size: 16px;
@@ -12,12 +12,12 @@
 
 h1, h2, h3, h4, h5, p, span,a ,li{
     color: #111;
-    font-family: 'Noto Sans SC', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: normal;
 }
 
 button{
-    font-family: 'Noto Sans SC', sans-serif;
+    font-family: 'Roboto', sans-serif;
     display: block;
     width: 250px;
     box-shadow: none;

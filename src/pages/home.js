@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames"
 import "./home.scss";
 import study from "../assets/study.png"
-import icons from "../assets/icons.png"
+import icon from "../assets/icons.png"
 import potrait from "../assets/potrait.png"
 import tsinghua from "../assets/tsinghua.png"
 class Home extends React.Component{
@@ -207,29 +207,39 @@ class Home extends React.Component{
             </section>
             <section className="fitting">
                 <h3>适合人群</h3>
-                <div className="icons">
-                    <img src={icons} alt="icons"/>
-                </div>
+                
                 <div className="texts">
                     <div className="ptab">
+                        <div className="icon">
+                            <img src={icon} alt="icon"/>
+                        </div>
                         <h4>学生</h4>
                         <p>学生</p>
                         <p>学生</p>
                         <p>学生</p>
                     </div>
                     <div className="ptab">
+                        <div className="icon">
+                            <img src={icon} alt="icon"/>
+                        </div>
                         <h4>互联网行业</h4>
                         <p>学生</p>
                         <p>学生</p>
                         <p>学生学生</p>
                     </div>
                     <div className="ptab">
+                        <div className="icon">
+                            <img src={icon} alt="icon"/>
+                        </div>
                         <h4>自由职业者</h4>
                         <p>学生</p>
                         <p>学生学生</p>
                         <p>学生学生</p>
                     </div>
                     <div className="ptab">
+                        <div className="icon">
+                            <img src={icon} alt="icon"/>
+                        </div>
                         <h4>其他行业</h4>
                         <p>学生</p>
                         <p>学生</p>
